@@ -1,11 +1,151 @@
-/* Example of @import use
-This imports the `reset.css` file */
-@import url('./reset.css');
+nav {
+  font-weight: 400;
+  border-radius: 10px;
+  width: 550px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 
-/* For testing purposes, delete this code */
-body {
-  font-size: max(20vw, 400px);
-  width: min(20vw, 400px);
-  margin: 20px;
+@media (width <= 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  nav li {
+    margin: 0 10px;
+    padding-bottom: 5px;
+    display: flex;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
   padding: 0;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (width <= 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  top: 0;
+  height: 160px;
+  padding: 0 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+body {
+  background-color: #eceae5;
+  justify-content: center;
+  align-items: center;
+}
+
+.ads-image {
+  top: 0;
+  width: 1250px;
+  height: 300px;
+  padding: 0 20px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.body-image {
+  width: 400px;
+  height: 250px;
+}
+
+.footer-image {
+  width: 150px;
+  height: 80px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+#second {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px 50px;
+  width: 1500px;
+  height: 550px;
+}
+
+#third {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px 50px;
+  width: 1500px;
+  height: 550px;
+}
+
+#fourth {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px 50px;
+  width: 1500px;
+  height: 550px;
+}
+
+footer {
+  padding: 10px;
+  margin: 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#swing-animation {
+  display: inline-block;
+  animation: swing 3s 2;
+  transform-origin: center bottom;
+}
+
+p {
+  margin: 10px;
+  color: #060202;
 }
